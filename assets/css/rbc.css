@@ -1,0 +1,100 @@
+/**
+ * Plugin Styles
+ *
+ * Created     September 24, 2019
+ * 
+ * @package    Bread Finance
+ * @author     Bread
+ * @since      1.0.0
+ */
+div#rbc-placeholder {
+  border: 2px solid #999;
+  border-radius: 8px;
+  color: #999;
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 200px;
+}
+
+div.rbc-placeholder-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50px;
+  padding: 0 1em;
+  bottom: 0;
+}
+
+div.rbc-placeholder-center {
+  text-align: center;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+div.rbc-placeholder-center-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+div.rbc-placeholder-icon {
+  position: absolute;
+  top: -1px;
+  right: -51px;
+  bottom: -1px;
+  left: 100%;
+  margin-left: -50px;
+  margin-right: 50px;
+  background-color: #999;
+  background-repeat: no-repeat;
+  background-image: url(../image/coind.svg);
+  background-position: center;
+  background-size: auto 30px;
+  border-radius: 0 4px 4px 0;
+}
+
+div#rbc-btn-cntnr {
+  display: inline-block;
+  position: relative;
+}
+
+div.button-prevent {
+  cursor: pointer;
+  position: absolute;
+  display: none;
+  top: 0px;
+  height: 100%;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99999;
+}
+
+div.button-prevent:hover span.buy_error_tip {
+  display: block;
+}
+
+span.buy_error_tip {
+  color: black;
+  background-color: white;
+  display: none;
+  position: relative;
+  width: 80%;
+  top: -30px;
+  padding: 5px 7px;
+  font-size: 11px;
+  line-height: 16px;
+  text-decoration: none;
+  text-indent: 0;
+  text-align: center;
+  border: 2px solid #b00;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 500;
+}
+
+span.buy_error_tip:after {
+  content: attr(data-content);
+}

@@ -1,0 +1,23 @@
+tenant_name: Bread Pay
+gateway_id: bread_finance
+tenant_prefix: bread
+tenant_author_uri: https://payments.breadfinancial.com/
+tenant_docs_uri: https://www.breadpayments.com/documentation/
+tenant_sdk: BreadPayments
+plugin_description: Adds the Bread Pay Gateway to your WooCommerce site.
+plugin_author: Bread Financial
+checkout_host_sandbox: https://checkout-sandbox.getbread.com
+checkout_host: https://checkout.getbread.com
+bread_host: https://api.getbread.com
+bread_host_sandbox: https://api-sandbox.getbread.com
+sdk_core: https://connect.breadpayments.com/sdk.js
+sdk_core_sandbox: https://connect-preview.breadpayments.com/sdk.js
+platform_domain_api_sandbox: https://api-preview.platform.breadpayments.com/api
+platform_domain_api: https://api.platform.breadpayments.com/api
+sentry_sdk: https://browser.sentry-cdn.com/5.9.1/bundle.min.js
+default_sdk_version: classic
+text_domain: bread-finance
+currency: USD
+sdk_versions:
+  classic: Classic
+  bread_2: Platform
