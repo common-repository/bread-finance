@@ -5,7 +5,7 @@
  * Description: Adds the Bread Pay Gateway to your WooCommerce site.
  * Author: Bread Financial
  * Author URI: https://payments.breadfinancial.com/
- * Version: 3.5.6
+ * Version: 3.5.7
  * Text Domain: bread_finance
  * Domain Path: /i18n/languages/
  * WC requires at least: 3.0.0
@@ -205,7 +205,7 @@ if (!class_exists(WC_Bread_Finance::class)) {
             $tenant = strtoupper($this->bread_config->get('gateway_id'));
             
             //Require minimums and constants
-            define('WC_' . $tenant . '_VERSION', '3.5.6');
+            define('WC_' . $tenant . '_VERSION', '3.5.7');
             define('WC_' . $tenant . '_MIN_PHP_VER', '5.6.0');
             define('WC_' . $tenant . '_MIN_WC_VER', '3.4.0');
             define('WC_' . $tenant . '_MAIN_FILE', __FILE__);
@@ -280,6 +280,13 @@ add_action( 'woocommerce_blocks_loaded', function () {
         }
     );
 });
+
+// Declare HOPS compatibility
+add_action( 'before_woocommerce_init', function() {
+    if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+    }
+} );
 
 $instance_name = 'wc_' . $bread_config->get('gateway_id');
 

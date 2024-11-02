@@ -1959,9 +1959,9 @@ if (class_exists('\WC_Payment_Gateway')) {
 
             $order->update_status('on-hold');
             $this->updateOrderTxStatus($order, $authorized_tx);
+            $order->update_meta_data( '_payment_method', $this->bread_config->get('gateway_id')); // Ensure Bread is selected payment method
             $order->save();
 
-            update_post_meta($order_id, '_payment_method', $this->bread_config->get('gateway_id')); // Ensure Bread is selected payment method
             if ($this->is_auto_settle()) {
                 $order->update_status('processing');
             }

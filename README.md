@@ -3,7 +3,7 @@ Contributors: breadpay
 Tags: bread, finance, breadpay, woocommerce, financing
 Requires at least: 4.9
 Tested up to: 6.1.1
-Stable tag: 3.5.6
+Stable tag: 3.5.7
 Requires PHP: 5.6
 WC requires at least: 3.0
 WC tested up to: 7.3.0
@@ -72,8 +72,11 @@ Note: If your site utilizes any 3rd party optimizing/caching plugins, please exc
 
 == Changelog ==
 
-= 3.5.6
+= 3.5.7
 * Current release
+* Add HPOS compatibility
+
+= 3.5.6
 * Rename source field so it doesn't interfere with other plugins
 * Update Bread placeholder
 * Fix sandbox urls
